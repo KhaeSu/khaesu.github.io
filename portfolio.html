@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Your Name</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header>
     <h1>My Portfolio</h1>
@@ -18,12 +20,39 @@
 
   <main>
     <section class="gallery">
-      <img src="images/art1.jpg" alt="A painting I made" />
-      <img src="images/art2.jpg" alt="Artwork 2" />
-      <img src="images/art3.jpg" alt="Artwork 3" />
-      <!-- Add more images as needed -->
+      <!-- Thumbnails that open popups -->
+      <a href="#popup1">
+        <img src="images/art1.jpg" alt="A painting I made" />
+      </a>
+      <a href="#popup2">
+        <img src="images/art2.jpg" alt="Artwork 2" />
+      </a>
+      <a href="#popup3">
+        <img src="images/art3.jpg" alt="Artwork 3" />
+      </a>
+      <a href="#popup4">
+        <img src="images/art4.jpg" alt="Artwork 4" />
+      </a>
+
     </section>
   </main>
+
+  <!-- Popup overlays (click anywhere to close) -->
+  <a href="#" class="popup" id="popup1">
+    <img src="images/art1.jpg" alt="A painting I made" />
+  </a>
+
+  <a href="#" class="popup" id="popup2">
+    <img src="images/art2.jpg" alt="Artwork 2" />
+  </a>
+
+  <a href="#" class="popup" id="popup3">
+    <img src="images/art3.jpg" alt="Artwork 3" />
+  </a>
+  <a href="#" class="popup" id="popup4">
+    <img src="images/art4.jpg" alt="Artwork 4" />
+  </a>
+
 
   <footer>
     <a href="mailto:you@example.com">you@example.com</a>
@@ -31,4 +60,5 @@
     <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
   </footer>
 </body>
+
 </html>

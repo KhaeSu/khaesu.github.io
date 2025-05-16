@@ -1,33 +1,100 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background: #f8f8f8;
-    color: #333;
-    text-align: center;
-  }
-  
-  header {
-    background: #444;
-    color: white;
-    padding: 2rem 1rem;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-  }
-  
-  .gallery img {
-    max-width: 300px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  footer {
-    padding: 1rem;
-    background: #eee;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  color: #333;
+  text-align: center;
+}
 
+/* Header bar */
+header {
+  background: #444;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.gallery img {
+  width: 280px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  cursor: zoom-in;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #444;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  text-align: center;
+}
+
+.popup:target {
+  display: flex;
+}
+
+.popup img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  pointer-events: none; /* So clicking image doesn't block close */
+}
+
+/* Close button */
+.popup .close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+}
