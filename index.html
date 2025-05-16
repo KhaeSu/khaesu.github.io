@@ -2,26 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Art Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header>
-    <h1>My Art Portfolio</h1>
-    <p>by Your Name</p>
+    <h1>Your Name</h1>
+    <nav>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#store">Store</a>
+    </nav>
+    
   </header>
 
   <main>
-    <section class="gallery">
-      <img src="images/art1.jpg" alt="Artwork 1" />
-      <img src="images/art2.jpg" alt="Artwork 2" />
-      <img src="images/art3.jpg" alt="Artwork 3" />
+    <section id="about" class="about-section">
+      <img src="images/me.jpg" alt="A photo of me" class="profile-pic"/>
+      <p>Hello! I'm an artist working with gouache and traditional media. This is my personal gallery. Enjoy exploring!</p>
+    </section>
+
+    <section class="store-section" id="store">
+      <a href="https://yourstorelink.com" class="store-button">Visit Store</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <a href="mailto:you@example.com">you@example.com</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
   </footer>
 </body>
 </html>
