@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Art Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header>
-    <h1>Your Name</h1>
+    <h1>Portfolio</h1>
     <nav>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#store">Store</a>
+      <a href="index.html">Portfolio</a>
+      <a href="about.html">About</a>
     </nav>
-    
   </header>
 
   <main>
-    <section id="about" class="about-section">
-      <img src="images/me.jpg" alt="A photo of me" class="profile-pic"/>
-      <p>Hello! I'm an artist working with gouache and traditional media. This is my personal gallery. Enjoy exploring!</p>
-    </section>
+    <section class="gallery">
+      <!-- Thumbnails that open popups -->
+      <a href="#popup1">
+        <img src="images/art1.jpg" alt="A painting I made" />
+      </a>
+      <a href="#popup2">
+        <img src="images/art2.jpg" alt="Artwork 2" />
+      </a>
+      <a href="#popup3">
+        <img src="images/art3.jpg" alt="Artwork 3" />
+      </a>
+      <a href="#popup4">
+        <img src="images/art4.jpg" alt="Artwork 4" />
+      </a>
 
-    <section class="store-section" id="store">
-      <a href="https://yourstorelink.com" class="store-button">Visit Store</a>
     </section>
   </main>
 
+  <!-- Popup overlays (click anywhere to close) -->
+  <a href="#" class="popup" id="popup1" data-index="1">
+    <img src="images/art1.jpg" alt="Artwork 1" />
+  </a>
+
+  <a href="#" class="popup" id="popup2" data-index="2">
+    <img src="images/art2.jpg" alt="Artwork 2" />
+  </a>
+
+  <a href="#" class="popup" id="popup3" data-index="3">
+    <img src="images/art3.jpg" alt="Artwork 3" />
+  </a>
+
+  <a href="#" class="popup" id="popup4" data-index="4">
+    <img src="images/art4.jpg" alt="Artwork 4" />
+  </a>
+
+
   <footer>
-    <a href="mailto:you@example.com">you@example.com</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+    <a href="https://instagram.com/itskhaeee.art" target="_blank">Instagram</a>
   </footer>
 </body>
+<script>
+  const totalImages = 4; // Update this if you add more
+  document.addEventListener("keydown", function (e) {
+    const current = document.querySelector(".popup:target");
+    if (!current) return;
+
+    const index = parseInt(current.getAttribute("data-index"));
+
+    if (e.key === "ArrowRight") {
+      const next = index === totalImages ? 1 : index + 1;
+      window.location.hash = `#popup${next}`;
+    }
+
+    if (e.key === "ArrowLeft") {
+      const prev = index === 1 ? totalImages : index - 1;
+      window.location.hash = `#popup${prev}`;
+    }
+
+    if (e.key === "Escape") {
+      window.location.hash = "";
+    }
+  });
+</script>
+
 </html>

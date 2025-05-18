@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Khae</title>
+
+  <!-- Load Oldenburg font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Apply Oldenburg font to all text in about section */
+    .about-section {
+      font-family: 'Oldenburg', serif;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Oldenburg', serif;
+      /* Ensures same font even if global heading font changes */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Khae</h1>
+    <nav>
+      <a href="index.html">Portfolio</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <img src="images/me.jpg" alt="A photo of me" class="profile-pic" />
+      <h2>A little about me 🌱</h2>
+
+      <p>Hello! I’m Khae — a Burmese artist currently based in Paris. I spend my days painting outdoors, biking through
+        the city with my bike Noe, and following whatever small thing catches my eye — a shadow, a fallen leaf, the way
+        the light hits a wall.</p>
+
+      <p>I studied at École Émile Cohl in Lyon, where I deepened my love for visual storytelling, traditional media, and
+        the French language. These days, I work mostly with gouache, drawn to soft colors, greenery, flowers, and
+        peaceful, fleeting moments. My work is often about the quiet details that feel important — even if we can’t
+        quite explain why.</p>
+
+      <p>I’m a deep feeler and a little impulsive — happiest when I’m collecting things I love: scraps, receipts,
+        pressed flowers, memories. I journal a lot (I forget things easily) and collect notebooks obsessively, filling
+        them with thoughts, sketches, and pieces of my days.</p>
+
+      <p>I love music that makes me feel everything, movies that make me cry, and solo cinema trips. I find comfort in
+        simple things — nature, Studio Ghibli films, the warmth of green, and the soft magic hidden in everyday life.
+      </p>
+      <h3 class="about-subtitle">Interested in working with me?</h3>
+
+      <p>Feel free to send me a message below — whether it’s for a commission, a collaboration, or just to say hello!
+      </p>
+
+      <form action="https://formsubmit.co/yaykhae.mm@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="What would you like to share?" required></textarea>
+        <button type="submit">Send Message</button>
+        <input type="hidden" name="_next" value="https://khaesu.github.io/thank-you.html">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://instagram.com/itskhaeee.art" target="_blank">Instagram</a>
+  </footer>
+</body>
+
+</html>
