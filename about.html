@@ -6,31 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Khae</title>
 
-  <!-- Load Oldenburg font -->
-  <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
-
+  <!-- Load Borel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
   <style>
-    /* Apply Oldenburg font to all text in about section */
-    .about-section {
-      font-family: 'Oldenburg', serif;
+    body {
+      font-family: 'Borel', cursive;
     }
 
-    .about-section h2 {
-      font-size: 2rem;
+    header h1,
+    nav a,
+    footer a {
+      font-family: 'Borel', cursive;
+    }
+
+    .about-section {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      padding: 3rem 1rem;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      background: #fdf6f0;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section h2,
+    .about-subtitle {
+      font-family: 'Borel', cursive;
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #333;
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      font-family: 'Oldenburg', serif;
-      /* Ensures same font even if global heading font changes */
+    }
+
+    .about-section p {
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 4px solid #ddd;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Khae</h1>
+    <h1>KHAE SU</h1>
     <nav>
       <a href="index.html">Portfolio</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -55,18 +96,9 @@
       <p>I love music that makes me feel everything, movies that make me cry, and solo cinema trips. I find comfort in
         simple things — nature, Studio Ghibli films, the warmth of green, and the soft magic hidden in everyday life.
       </p>
+
       <h3 class="about-subtitle">Interested in working with me?</h3>
-
-      <p>Feel free to send me a message below — whether it’s for a commission, a collaboration, or just to say hello!
-      </p>
-
-      <form action="https://formsubmit.co/yaykhae.mm@gmail.com" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="What would you like to share?" required></textarea>
-        <button type="submit">Send Message</button>
-        <input type="hidden" name="_next" value="https://khaesu.github.io/thank-you.html">
-      </form>
+      <p>You can reach me on the <a href="contact.html">contact page</a> — I’d love to hear from you!</p>
     </section>
   </main>
 

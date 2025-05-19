@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Khae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        body {
+            font-family: 'Borel', cursive;
+        }
+
+        header h1,
+        nav a,
+        footer a,
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button,
+        .contact-page h2 {
+            font-family: 'Borel', cursive;
+        }
+
+        .contact-page {
+            padding: 3rem 1rem;
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            background: #fdf6f0;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-page h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .contact-page p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KHAE SU</h1>
+        <nav>
+            <a href="index.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <h2>Interested in working with me?</h2>
+            <p>
+                I’m currently open for commissions, collaborations, or creative conversations.<br />
+                Feel free to send me a message below — I’d love to hear from you 🌿
+            </p>
+
+            <form action="https://formsubmit.co/yaykhae.mm@gmail.com" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+                <textarea name="message" placeholder="What would you like to share?" required></textarea>
+                <button type="submit">Send Message</button>
+                <input type="hidden" name="_next" value="https://khaesu.github.io/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="mailto:yaykhae.mm@gmail.com">yaykhae.mm@gmail.com</a>
+        <a href="https://instagram.com/itskhaeee.art" target="_blank">Instagram</a>
+    </footer>
+</body>
+
+</html>

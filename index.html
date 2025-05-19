@@ -4,24 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Your Name</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+  <title>Khae – Portfolio</title>
 
+  <!-- Load Borel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      font-family: 'Borel', cursive;
+    }
+
+    header h1,
+    nav a,
+    footer a {
+      font-family: 'Borel', cursive;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Portfolio</h1>
+    <h1>KHAE SU</h1>
     <nav>
       <a href="index.html">Portfolio</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="gallery">
-      <!-- Thumbnails that open popups -->
       <a href="#popup1">
         <img src="images/art1.jpg" alt="A painting I made" />
       </a>
@@ -34,54 +47,50 @@
       <a href="#popup4">
         <img src="images/art4.jpg" alt="Artwork 4" />
       </a>
-
     </section>
   </main>
 
-  <!-- Popup overlays (click anywhere to close) -->
+  <!-- Popup overlays -->
   <a href="#" class="popup" id="popup1" data-index="1">
     <img src="images/art1.jpg" alt="Artwork 1" />
   </a>
-
   <a href="#" class="popup" id="popup2" data-index="2">
     <img src="images/art2.jpg" alt="Artwork 2" />
   </a>
-
   <a href="#" class="popup" id="popup3" data-index="3">
     <img src="images/art3.jpg" alt="Artwork 3" />
   </a>
-
   <a href="#" class="popup" id="popup4" data-index="4">
     <img src="images/art4.jpg" alt="Artwork 4" />
   </a>
 
-
   <footer>
     <a href="https://instagram.com/itskhaeee.art" target="_blank">Instagram</a>
   </footer>
+
+  <script>
+    const totalImages = 4;
+    document.addEventListener("keydown", function (e) {
+      const current = document.querySelector(".popup:target");
+      if (!current) return;
+
+      const index = parseInt(current.getAttribute("data-index"));
+
+      if (e.key === "ArrowRight") {
+        const next = index === totalImages ? 1 : index + 1;
+        window.location.hash = `#popup${next}`;
+      }
+
+      if (e.key === "ArrowLeft") {
+        const prev = index === 1 ? totalImages : index - 1;
+        window.location.hash = `#popup${prev}`;
+      }
+
+      if (e.key === "Escape") {
+        window.location.hash = "";
+      }
+    });
+  </script>
 </body>
-<script>
-  const totalImages = 4; // Update this if you add more
-  document.addEventListener("keydown", function (e) {
-    const current = document.querySelector(".popup:target");
-    if (!current) return;
-
-    const index = parseInt(current.getAttribute("data-index"));
-
-    if (e.key === "ArrowRight") {
-      const next = index === totalImages ? 1 : index + 1;
-      window.location.hash = `#popup${next}`;
-    }
-
-    if (e.key === "ArrowLeft") {
-      const prev = index === 1 ? totalImages : index - 1;
-      window.location.hash = `#popup${prev}`;
-    }
-
-    if (e.key === "Escape") {
-      window.location.hash = "";
-    }
-  });
-</script>
 
 </html>
