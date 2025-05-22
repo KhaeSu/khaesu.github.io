@@ -7,48 +7,40 @@
     <title>Contact – Khae</title>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-
-    <style>
-        header h1,
-        footer a {
-            font-family: 'Borel', cursive;
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
-        <nav>
-            <a href="index.html">Portfolio</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="contact-page">
-            <h2>Interested in working with me?</h2>
-            <p>
-                I’m currently open for commissions, collaborations, or creative conversations. Feel free to send me a
-                message below. <br />
-                I’d love to hear from you 🌿
-            </p>
-
-            <form action="https://formsubmit.co/yaykhae.mm@gmail.com" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your name" required />
-                <input type="email" name="email" placeholder="Your email" required />
-                <textarea name="message" placeholder="What would you like to share?" required></textarea>
-                <button type="submit">Send Message</button>
-                <input type="hidden" name="_next" value="https://khaesu.github.io/thank-you.html">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <a href="https://instagram.com/khaesu.art" target="_blank">Instagram</a>
-    </footer>
+    <div class="page-container">
+        <header>
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
+            <nav>
+                <a href="index.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section class="contact-page">
+                <h2>Interested in working with me?</h2>
+                <p>
+                    I’m currently open for commissions, collaborations, or creative conversations. Feel free to send me
+                    a message below. <br />
+                    I’d love to hear from you 🌿
+                </p>
+                <form action="https://formsubmit.co/yaykhae.mm@gmail.com" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your name" required />
+                    <input type="email" name="email" placeholder="Your email" required />
+                    <textarea name="message" placeholder="What would you like to share?" required></textarea>
+                    <button type="submit">Send Message</button>
+                    <input type="hidden" name="_next" value="https://khaesu.github.io/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <a href="https://instagram.com/khaesu.art" target="_blank">Instagram</a>
+        </footer>
+    </div>
 </body>
 
 </html>
