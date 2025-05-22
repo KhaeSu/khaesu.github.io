@@ -180,9 +180,17 @@ footer a:hover {
   margin-right: auto;
   text-align: left;
 }
-
+/* 
 .contact-form input,
 .contact-form textarea {
   font-size: 1rem;
   padding: 0.75rem;
   bord
+ */
+
+ nav a.active {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #d89fa4; /* or #333 if you prefer */
+  text-underline-offset: 4px;
+}
