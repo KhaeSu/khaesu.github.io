@@ -23,6 +23,14 @@
   </style>
 </head>
 
+<script>
+  // Disable right-click
+  window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+</script>
+
+
 <body>
   <header>
     <h1><a href="index.html" style="text-decoration: none; color: inherit;"></a>KHAE SU</a></h1>
@@ -36,16 +44,16 @@
   <main>
     <section class="gallery">
       <a href="#popup1">
-        <img src="images/art1.jpg" alt="A painting I made" />
+        <img src="images/art1.jpg" alt="A painting I made" draggable="false" />
       </a>
       <a href="#popup2">
-        <img src="images/art2.jpg" alt="Artwork 2" />
+        <img src="images/art2.jpg" alt="Artwork 2" draggable="false" />
       </a>
       <a href="#popup3">
-        <img src="images/art3.jpg" alt="Artwork 3" />
+        <img src="images/art3.jpg" alt="Artwork 3" draggable="false" />
       </a>
       <a href="#popup4">
-        <img src="images/art4.jpg" alt="Artwork 4" />
+        <img src="images/art4.jpg" alt="Artwork 4" draggable="false" />
       </a>
     </section>
   </main>
