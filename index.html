@@ -14,9 +14,24 @@
     <header>
       <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
       <nav>
-        <a href="index.html" class="active">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-center-group" style="display: flex; align-items: center; justify-content: center;">
+          <div class="nav-links">
+            <a href="index.html" class="active">Personal</a>
+            <a href="work.html">Client Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://etsy.com" target="_blank" rel="noopener noreferrer">Shop</a>
+          </div>
+          <div class="nav-separator"></div>
+          <div class="nav-social">
+            <a href="https://instagram.com/khaesu.art" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="nav-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8A4.8 4.8 0 1 0 12 7.2Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@KhaeeeSu" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="nav-icon">
+              <svg viewBox="0 0 24 24"><path d="M10 9.5V14.5L15 12L10 9.5Z" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -36,21 +51,25 @@
       </section>
     </main>
     <a href="#" class="popup" id="popup1" data-index="1">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup4">&lt;</button>
       <img src="images/art1.jpg" alt="Artwork 1" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popup2">&gt;</button>
     </a>
     <a href="#" class="popup" id="popup2" data-index="2">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup1">&lt;</button>
       <img src="images/art2.jpg" alt="Artwork 2" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popup3">&gt;</button>
     </a>
     <a href="#" class="popup" id="popup3" data-index="3">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup2">&lt;</button>
       <img src="images/art3.jpg" alt="Artwork 3" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popup4">&gt;</button>
     </a>
     <a href="#" class="popup" id="popup4" data-index="4">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup3">&lt;</button>
       <img src="images/art4.jpg" alt="Artwork 4" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popup1">&gt;</button>
     </a>
-    <footer>
-      <a href="https://instagram.com/khaesu.art" target="_blank">Instagram</a>
-            <a href="https://www.youtube.com/@KhaeeeSu" target="_blank">Youtube</a>
-    </footer>
   </div>
   <script src="scripts.js"></script>
 </body>
