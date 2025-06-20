@@ -421,6 +421,13 @@ footer a:hover {
   transform: scale(1.04) rotate(-2deg);
 }
 
+.image-scroller .comic-page-img {
+  width: 240px !important;
+  height: 340px !important;
+  object-fit: contain !important;
+  margin: 0 0px !important;
+}
+
 .tile-text {
   flex: 0.75;
   display: flex;
@@ -546,4 +553,36 @@ footer a:hover {
   background: #eecfd6;
   color: #fff;
   transform: translateY(-50%) scale(0.97);
+}
+
+.comic-horizontal .comic-page-img {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.project1-img, .project2-img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(92, 131, 111, 0.08);
+  background: #fff;
+  transition: transform 0.2s ease;
+  border: none;
+}
+
+.comic-page-img {
+  width: 240px;
+  height: 340px;
+  object-fit: contain;
+  /* margin removed, spacing now controlled by gap */
+}
+
+.comic-scroller {
+  gap: 12px !important;
+}
+
+.tile-bg3 .comic-scroller {
+  gap: 12px !important;
 }
