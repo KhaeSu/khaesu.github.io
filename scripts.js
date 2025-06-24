@@ -133,16 +133,24 @@ function updateArrows(tileImages) {
   const leftArrow = tileImages.querySelector('.scroll-arrow.left');
   const rightArrow = tileImages.querySelector('.scroll-arrow.right');
   if (!scroller || !leftArrow || !rightArrow) return;
-  // Check scroll positions
-  if (scroller.scrollLeft <= 2) {
+
+  // Only show arrows if scrolling is possible (robust check)
+  if (scroller.scrollWidth - scroller.clientWidth > 1) {
+    // Check scroll positions
+    if (scroller.scrollLeft <= 2) {
+      leftArrow.classList.add('hidden');
+    } else {
+      leftArrow.classList.remove('hidden');
+    }
+    if (scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 2) {
+      rightArrow.classList.add('hidden');
+    } else {
+      rightArrow.classList.remove('hidden');
+    }
+  } else {
+    // Hide both arrows if no scrolling is possible
     leftArrow.classList.add('hidden');
-  } else {
-    leftArrow.classList.remove('hidden');
-  }
-  if (scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 2) {
     rightArrow.classList.add('hidden');
-  } else {
-    rightArrow.classList.remove('hidden');
   }
 }
 
@@ -159,6 +167,26 @@ document.querySelectorAll('.tile-images').forEach(function(tileImages) {
   window.addEventListener('resize', function() {
     updateArrows(tileImages);
   });
+
+  // Update after all images load
+  const images = scroller.querySelectorAll('img');
+  let loadedCount = 0;
+  images.forEach(function(img) {
+    if (img.complete) {
+      loadedCount++;
+    } else {
+      img.addEventListener('load', function() {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          updateArrows(tileImages);
+        }
+      });
+    }
+  });
+  // If all images were already loaded
+  if (loadedCount === images.length) {
+    updateArrows(tileImages);
+  }
 });
 
 // Popup navigation for preview arrows
