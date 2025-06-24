@@ -12,13 +12,25 @@
 <body>
   <div class="page-container">
     <header>
-      <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
+      <div class="header-row">
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
+        <button id="hamburger-menu" aria-label="Open menu" style="display:none;background:none;border:none;padding:0.5rem;cursor:pointer;z-index:1000;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+            <rect y="14" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+            <rect y="21" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+          </svg>
+        </button>
+      </div>
       <nav>
-        <div class="nav-center-group" style="display: flex; align-items: center; justify-content: center;">
+        <div class="nav-center-group" style="display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+          <button id="close-menu" aria-label="Close menu" style="display:none;position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;padding:0.5rem;z-index:3000;cursor:pointer;">
+            <svg width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="8" x2="24" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="8" x2="8" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/></svg>
+          </button>
           <div class="nav-links">
             <a href="index.html">Personal</a>
-            <a href="work.html">Client Work</a>
-            <a href="about.html" class="active">About</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="https://etsy.com" target="_blank" rel="noopener noreferrer">Shop</a>
           </div>
@@ -58,6 +70,62 @@
       </section>
     </main>
   </div>
+  <script src="scripts.js"></script>
+  <script>
+  (function() {
+    var hamburger = document.getElementById('hamburger-menu');
+    var navLinks = document.querySelector('.nav-links');
+    var navSocial = document.querySelector('.nav-social');
+    var closeMenu = document.getElementById('close-menu');
+    function checkWidth() {
+      if (window.innerWidth <= 768) {
+        hamburger.style.display = 'block';
+        navLinks.style.display = 'none';
+        navSocial.style.display = 'none';
+        closeMenu.style.display = 'none';
+        document.body.classList.remove('nav-open');
+      } else {
+        hamburger.style.display = 'none';
+        navLinks.style.display = '';
+        navSocial.style.display = '';
+        closeMenu.style.display = 'none';
+        document.body.classList.remove('nav-open');
+      }
+    }
+    hamburger && hamburger.addEventListener('click', function() {
+      var isOpen = document.body.classList.contains('nav-open');
+      if (isOpen) {
+        document.body.classList.remove('nav-open');
+        navLinks.style.display = 'none';
+        navSocial.style.display = 'none';
+        closeMenu.style.display = 'none';
+      } else {
+        document.body.classList.add('nav-open');
+        navLinks.style.display = 'flex';
+        navSocial.style.display = 'flex';
+        closeMenu.style.display = 'block';
+      }
+    });
+    closeMenu && closeMenu.addEventListener('click', function() {
+      document.body.classList.remove('nav-open');
+      navLinks.style.display = 'none';
+      navSocial.style.display = 'none';
+      closeMenu.style.display = 'none';
+    });
+    document.querySelectorAll('.nav-links a, .nav-social a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          document.body.classList.remove('nav-open');
+          navLinks.style.display = 'none';
+          navSocial.style.display = 'none';
+          closeMenu.style.display = 'none';
+        }
+      });
+    });
+    window.addEventListener('resize', checkWidth);
+    document.addEventListener('DOMContentLoaded', checkWidth);
+  })();
+  </script>
 </body>
 
 </html>
