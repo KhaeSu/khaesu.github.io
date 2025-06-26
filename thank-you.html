@@ -12,16 +12,51 @@
 
 <body>
     <div class="page-container">
-        <div class="header-row" style="display: flex; align-items: center; justify-content: center;">
-          <div style="display: flex; align-items: center; margin-left: -60px; margin-top: -30px;">
-            <img src="images/khaesulogo/tulip.png" alt="Tulip" style="max-height: 150px; margin-right: 28px;" />
-            <h1 style="margin: 0;">
-              <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
-                <img src="images/khaesulogo/khaesutext.png" alt="Khae Su logo text" style="display: block; max-height: 84px; margin: 0 auto; opacity: 0.5;" />
-              </a>
-            </h1>
-          </div>
-        </div>
+        <header>
+            <div class="header-row" style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center;">
+                    <h1 style="margin: 0;">
+                        <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
+                            <span style="font-family: 'Darumadrop One', sans-serif; font-weight: 400; font-size: 4.8rem; color: #d95662; display: block; margin: 0 auto; line-height: 84px; height: 84px; white-space: nowrap;">Khae Su</span>
+                        </a>
+                    </h1>
+                </div>
+                <button id="hamburger-menu" aria-label="Open menu" style="display:none;background:none;border:none;padding:0.5rem;cursor:pointer;z-index:1000;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+                        <rect y="14" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+                        <rect y="21" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
+                    </svg>
+                </button>
+            </div>
+            <nav>
+                <div class="nav-center-group" style="display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+                    <button id="close-menu" aria-label="Close menu" style="display:none;position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;padding:0.5rem;z-index:3000;cursor:pointer;">
+                        <svg width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="8" x2="24" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="8" x2="8" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="nav-links">
+                        <a href="index.html">Personal</a>
+                        <a href="work.html">Work</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="nav-social">
+                        <a href="https://instagram.com/khaesu.art" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="nav-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8A4.8 4.8 0 1 0 12 7.2Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/yaykhae.mm/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="nav-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1" fill="none"/>
+                                <path d="M13 19V13H15L15.3 11H13V9.5C13 9 13.2 8.7 14 8.7H15.3V7.2C15.1 7.2 14.4 7.1 13.7 7.1C12.1 7.1 11.3 7.9 11.3 9.5V11H10V13H11.3V19H13Z" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@KhaeeeSu" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="nav-icon">
+                            <svg viewBox="0 0 24 24"><path d="M10 9.5V14.5L15 12L10 9.5Z" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <main>
             <section class="thank-you-section">
                 <h2>Your message has been sent</h2>
