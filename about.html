@@ -12,8 +12,15 @@
 <body>
   <div class="page-container">
     <header>
-      <div class="header-row">
-        <h1><a href="index.html" style="text-decoration: none; color: inherit;">KHAE SU</a></h1>
+      <div class="header-row" style="display: flex; align-items: center; justify-content: center;">
+        <div style="display: flex; align-items: center; margin-left: -60px; margin-top: -30px;">
+          <img src="images/khaesulogo/tulip.png" alt="Tulip" style="max-height: 150px; margin-right: 28px;" />
+          <h1 style="margin: 0;">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
+              <img src="images/khaesulogo/khaesutext.png" alt="Khae Su logo text" style="display: block; max-height: 120px; margin: 0 auto;" />
+            </a>
+          </h1>
+        </div>
         <button id="hamburger-menu" aria-label="Open menu" style="display:none;background:none;border:none;padding:0.5rem;cursor:pointer;z-index:1000;">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="7" width="32" height="3.5" rx="1.5" fill="#d89fa4"/>
@@ -32,12 +39,16 @@
             <a href="work.html">Work</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="https://etsy.com" target="_blank" rel="noopener noreferrer">Shop</a>
           </div>
-          <div class="nav-separator"></div>
           <div class="nav-social">
             <a href="https://instagram.com/khaesu.art" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="nav-icon">
               <svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8A4.8 4.8 0 1 0 12 7.2Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/yaykhae.mm/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1" fill="none"/>
+                <path d="M13 19V13H15L15.3 11H13V9.5C13 9 13.2 8.7 14 8.7H15.3V7.2C15.1 7.2 14.4 7.1 13.7 7.1C12.1 7.1 11.3 7.9 11.3 9.5V11H10V13H11.3V19H13Z" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </a>
             <a href="https://www.youtube.com/@KhaeeeSu" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="nav-icon">
               <svg viewBox="0 0 24 24"><path d="M10 9.5V14.5L15 12L10 9.5Z" fill="currentColor"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
@@ -47,26 +58,30 @@
       </nav>
     </header>
     <main>
-      <section class="about-section">
-        <h2>A little about me 🌱</h2>
-        <p>Hello! I'm Khae, a Burmese artist currently based in Paris. I spend my days painting outdoors, biking
-          through
-          the city with my bike Noe, and following whatever small thing catches my eye, a shadow, a fallen leaf, the
-          way
-          the light hits a wall.</p>
-        <p>I studied at École Émile Cohl in Lyon, where I deepened my love for visual storytelling, traditional media,
-          and
-          the French language. These days, I work mostly with gouache, drawn to soft colors, greenery, flowers, and
-          peaceful, fleeting moments. My work is often about the quiet details that feel important, even if we can't
-          quite explain why.</p>
-        <p>I'm a deep feeler and a little impulsive, happiest when I'm collecting things I love: scraps, receipts,
-          pressed flowers, memories. I journal a lot (I forget things easily) and collect notebooks obsessively, filling
-          them with thoughts, sketches, and pieces of my days.</p>
-        <p>I love music that makes me feel everything, movies that make me cry, and solo cinema trips. I find comfort in
-          simple things, nature, Studio Ghibli films, the warmth of green, and the soft magic hidden in everyday life.
-        </p>
-        <h3 class="about-subtitle">Interested in working with me?</h3>
-        <p>You can reach me on the <a href="contact.html">contact page</a> - I'd love to hear from you!</p>
+      <section class="about-section selectable-text">
+        <div class="about-text">
+          <div class="artist-section">
+            <div class="artist-photo">
+              <img src="images/about/khaepainting.jpg" alt="Khae Su painting" class="artist-face">
+            </div>
+            <div class="artist-text">
+              <h2>About the Artist</h2>
+              <p>Khae Su is a Burmese freelance illustrator and plein air artist, known for her vibrant and atmospheric works, currently based in Paris, France.</p>
+              <p>Her work explores vibrant, colorful scenes inspired by nature, often capturing peaceful moments filled with greenery, flowers, and the quiet beauty of daily life. She primarily works with gouache and watercolor, creating delicate, atmospheric illustrations that find beauty in life's simple moments.</p>
+              <p>Originally from Yangon, Myanmar, Khae studied at École Émile&nbsp;Cohl in Lyon, France, where she developed a strong foundation in traditional art and visual storytelling. Her illustrations are deeply personal, shaped by her surroundings, everyday observations, and the subtle magic found in ordinary&nbsp;moments.</p>
+            </div>
+          </div>
+          <div class="note-section">
+            <div class="note-text">
+              <h2>A Little More About Me</h2>
+              <p>The name Khae comes from the Burmese word Yay Khae (ရေခဲ), meaning ice. It was a nickname given to her by friends in high school for her calm and introverted nature. Over time, she embraced Khae-ခဲ as her artist identity - a quiet, steady name that reflects both her personality and her artistic sensibility.</p>
+              <p>When she's not painting or drawing, Khae enjoys biking around Paris on her bike, "Noe" collecting notebooks, journaling to capture her thoughts, and thrifting for secondhand clothes. She loves flowers, solo trips to the cinema, music that stirs deep emotions, and Studio Ghibli films. The beauty of nature and simple moments bring her comfort and inspiration.</p>
+            </div>
+            <div class="note-photo">
+              <img src="images/about/khaesetup.jpg" alt="Khae Su setup" class="note-image">
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
