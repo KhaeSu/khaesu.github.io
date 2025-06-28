@@ -216,6 +216,68 @@ nav a.active,
   cursor: zoom-in;
 }
 
+/* Masonry Gallery for Personal Photos */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 2rem;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(92, 131, 111, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  display: block;
+}
+
+.masonry-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(92, 131, 111, 0.25);
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for masonry */
+@media (max-width: 768px) {
+  .masonry-gallery {
+    column-count: 2;
+    column-gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .masonry-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-gallery {
+    column-count: 1;
+    column-gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  .masonry-item {
+    margin-bottom: 1rem;
+  }
+}
+
 /* Popup */
 .popup {
   position: fixed;
@@ -1463,6 +1525,6 @@ body.nav-open .nav-social .nav-icon svg circle[fill]:not([fill="none"]) {
 }
 
 .tile-bg2 .scroll-arrow {
-  top: 55% !important;
+  top: 50% !important;
   transform: translateY(-50%);
 }
