@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Borel&family=Delius+Swash+Caps:wght@400&family=Limelight&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/khaesulogo/tulip.png" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+  <style>
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+  </style>
 </head>
 
 <body>
@@ -60,192 +67,695 @@
       </nav>
     </header>
     <main>
+      <!-- Filter Section -->
+      <div class="filter-section" style="display: none;">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="buildings">Buildings</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="nighttime">Nighttime</button>
+          <button class="filter-btn" data-filter="personal">Personal</button>
+          <button class="filter-btn" data-filter="sketchbook">Sketchbook</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+          <button class="filter-btn" data-filter="urban">Urban</button>
+        </div>
+      </div>
+      
       <section class="masonry-gallery">
-        <!-- Travel -->
-        <div class="masonry-item">
-          <img src="images/personal/Travel/car.jpg" alt="Travel - car" />
+        <!-- Personalart Gallery Start -->
+        <!-- BEGIN PERSONALART MASONRY ITEMS -->
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart1"><img src="images/personalart/p1.jpg" alt="Personalart - p1" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Travel/day1.jpg" alt="Travel - day1" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart2"><img src="images/personalart/p2.jpg" alt="Personalart - p2" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Travel/map.jpg" alt="Travel - map" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart3"><img src="images/personalart/p3.jpg" alt="Personalart - p3" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Travel/van.jpeg" alt="Travel - van" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart4"><img src="images/personalart/p4.jpg" alt="Personalart - p4" loading="lazy" /></a>
         </div>
-        
-        <!-- Nature -->
-        <div class="masonry-item">
-          <img src="images/personal/Nature/1.jpg" alt="Nature - 1" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart5"><img src="images/personalart/p5.jpg" alt="Personalart - p5" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/2.jpg" alt="Nature - 2" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart6"><img src="images/personalart/p6.jpg" alt="Personalart - p6" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/3.jpg" alt="Nature - 3" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart7"><img src="images/personalart/p7.jpg" alt="Personalart - p7" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/4.jpg" alt="Nature - 4" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart8"><img src="images/personalart/p8.jpg" alt="Personalart - p8" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/5.jpg" alt="Nature - 5" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart9"><img src="images/personalart/p9.jpg" alt="Personalart - p9" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/6.jpg" alt="Nature - 6" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart10"><img src="images/personalart/p10.jpg" alt="Personalart - p10" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/7.jpg" alt="Nature - 7" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart11"><img src="images/personalart/p11.jpg" alt="Personalart - p11" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/8.jpg" alt="Nature - 8" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart12"><img src="images/personalart/p12.jpg" alt="Personalart - p12" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nature/cnn.jpg" alt="Nature - cnn" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart13"><img src="images/personalart/p13.jpg" alt="Personalart - p13" loading="lazy" /></a>
         </div>
-        
-        <!-- Urban -->
-        <div class="masonry-item">
-          <img src="images/personal/Urban/003.jpg" alt="Urban - 003" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart14"><img src="images/personalart/p14.jpg" alt="Personalart - p14" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/006.jpg" alt="Urban - 006" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart15"><img src="images/personalart/p15.jpg" alt="Personalart - p15" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/art1.jpg" alt="Urban - art1" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart16"><img src="images/personalart/p16.jpg" alt="Personalart - p16" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/b.jpg" alt="Urban - b" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart17"><img src="images/personalart/p17.jpg" alt="Personalart - p17" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/boat print.jpg" alt="Urban - boat print" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart18"><img src="images/personalart/p18.jpg" alt="Personalart - p18" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/june4.jpg" alt="Urban - june4" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart19"><img src="images/personalart/p19.jpg" alt="Personalart - p19" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Urban/june9.jpg" alt="Urban - june9" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart20"><img src="images/personalart/p20.jpg" alt="Personalart - p20" loading="lazy" /></a>
         </div>
-        
-        <!-- Nighttime -->
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/002.jpg" alt="Nighttime - 002" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart21"><img src="images/personalart/p21.jpg" alt="Personalart - p21" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/005.jpg" alt="Nighttime - 005" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart22"><img src="images/personalart/p22.jpg" alt="Personalart - p22" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/01.jpg" alt="Nighttime - 01" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart23"><img src="images/personalart/p23.jpg" alt="Personalart - p23" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/02.jpg" alt="Nighttime - 02" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart24"><img src="images/personalart/p24.jpg" alt="Personalart - p24" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/21d.jpg" alt="Nighttime - 21d" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart25"><img src="images/personalart/p25.jpg" alt="Personalart - p25" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/a.jpg" alt="Nighttime - a" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart26"><img src="images/personalart/p26.jpg" alt="Personalart - p26" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/kk.jpg" alt="Nighttime - kk" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart27"><img src="images/personalart/p26a.jpg" alt="Personalart - p26a" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Nighttime/snow train.jpg" alt="Nighttime - snow train" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart28"><img src="images/personalart/p27.jpg" alt="Personalart - p27" loading="lazy" /></a>
         </div>
-        
-        <!-- Personal -->
-        <div class="masonry-item">
-          <img src="images/personal/book.jpeg" alt="Personal - book" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart29"><img src="images/personalart/p28.jpg" alt="Personalart - p28" loading="lazy" /></a>
         </div>
-        
-        <!-- Buildings -->
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/ako.jpeg" alt="Buildings - ako" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart30"><img src="images/personalart/p29.jpg" alt="Personalart - p29" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/com.jpg" alt="Buildings - com" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart31"><img src="images/personalart/p30.jpg" alt="Personalart - p30" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/d.jpg" alt="Buildings - d" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart32"><img src="images/personalart/p31.jpg" alt="Personalart - p31" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/DSCF2024.jpg" alt="Buildings - DSCF2024" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart33"><img src="images/personalart/p32.jpg" alt="Personalart - p32" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/storef.JPG" alt="Buildings - storef" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart34"><img src="images/personalart/p33.jpg" alt="Personalart - p33" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/storefront plant2.jpeg" alt="Buildings - storefront plant2" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart35"><img src="images/personalart/p34.jpg" alt="Personalart - p34" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/temple.jpg" alt="Buildings - temple" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart36"><img src="images/personalart/p35.jpg" alt="Personalart - p35" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/wc.jpeg" alt="Buildings - wc" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart37"><img src="images/personalart/p36.jpg" alt="Personalart - p36" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Buildings/zune.jpeg" alt="Buildings - zune" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart38"><img src="images/personalart/p37.jpg" alt="Personalart - p37" loading="lazy" /></a>
         </div>
-        
-        <!-- Sketchbook -->
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/21e.jpg" alt="Sketchbook - 21e" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart39"><img src="images/personalart/p38.jpg" alt="Personalart - p38" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/21t.jpg" alt="Sketchbook - 21t" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart40"><img src="images/personalart/p39.jpg" alt="Personalart - p39" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/feb 15.jpg" alt="Sketchbook - feb 15" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart41"><img src="images/personalart/p40.jpg" alt="Personalart - p40" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/feb 23b.jpg" alt="Sketchbook - feb 23b" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart42"><img src="images/personalart/p41.jpg" alt="Personalart - p41" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/feb 23c.jpg" alt="Sketchbook - feb 23c" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart43"><img src="images/personalart/p42.jpg" alt="Personalart - p42" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/sb page10.jpg" alt="Sketchbook - sb page10" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart44"><img src="images/personalart/p43.jpg" alt="Personalart - p43" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/sb page12.jpg" alt="Sketchbook - sb page12" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart45"><img src="images/personalart/p44.jpg" alt="Personalart - p44" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/sb page13.jpg" alt="Sketchbook - sb page13" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart46"><img src="images/personalart/p45.jpg" alt="Personalart - p45" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/ssa.jpg" alt="Sketchbook - ssa" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart47"><img src="images/personalart/p46.jpg" alt="Personalart - p46" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/sse.jpg" alt="Sketchbook - sse" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart48"><img src="images/personalart/p47.jpg" alt="Personalart - p47" loading="lazy" /></a>
         </div>
-        <div class="masonry-item">
-          <img src="images/personal/Sketchbook/sss.jpg" alt="Sketchbook - sss" />
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart49"><img src="images/personalart/p48.jpg" alt="Personalart - p48" loading="lazy" /></a>
         </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart50"><img src="images/personalart/p49.jpg" alt="Personalart - p49" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart51"><img src="images/personalart/p50.jpg" alt="Personalart - p50" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart52"><img src="images/personalart/p51.jpg" alt="Personalart - p51" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart53"><img src="images/personalart/p52.jpg" alt="Personalart - p52" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart54"><img src="images/personalart/p53.jpg" alt="Personalart - p53" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart55"><img src="images/personalart/p54.jpg" alt="Personalart - p54" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart56"><img src="images/personalart/p55.jpg" alt="Personalart - p55" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart57"><img src="images/personalart/p56.jpg" alt="Personalart - p56" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart58"><img src="images/personalart/p57.jpg" alt="Personalart - p57" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart59"><img src="images/personalart/p58.jpg" alt="Personalart - p58" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart60"><img src="images/personalart/p59.jpg" alt="Personalart - p59" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart61"><img src="images/personalart/p60.jpg" alt="Personalart - p60" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart62"><img src="images/personalart/p61.jpg" alt="Personalart - p61" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart63"><img src="images/personalart/p62.jpg" alt="Personalart - p62" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart64"><img src="images/personalart/p63.jpg" alt="Personalart - p63" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart65"><img src="images/personalart/p64.jpg" alt="Personalart - p64" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart66"><img src="images/personalart/p65.jpg" alt="Personalart - p65" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart67"><img src="images/personalart/p66.jpg" alt="Personalart - p66" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart68"><img src="images/personalart/p67.jpg" alt="Personalart - p67" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart69"><img src="images/personalart/p68.jpg" alt="Personalart - p68" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart70"><img src="images/personalart/p69.jpg" alt="Personalart - p69" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart71"><img src="images/personalart/p70.jpg" alt="Personalart - p70" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart72"><img src="images/personalart/p71.jpg" alt="Personalart - p71" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart73"><img src="images/personalart/p72.jpg" alt="Personalart - p72" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart74"><img src="images/personalart/p73.jpg" alt="Personalart - p73" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart75"><img src="images/personalart/p74.jpg" alt="Personalart - p74" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart76"><img src="images/personalart/p75.jpg" alt="Personalart - p75" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart77"><img src="images/personalart/p76.jpg" alt="Personalart - p76" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart78"><img src="images/personalart/p77.jpg" alt="Personalart - p77" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart79"><img src="images/personalart/p78.jpg" alt="Personalart - p78" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart80"><img src="images/personalart/p79.jpg" alt="Personalart - p79" loading="lazy" /></a>
+        </div>
+        <div class="masonry-item" data-category="personalart">
+          <a href="#popupPersonalart81"><img src="images/personalart/p80.jpg" alt="Personalart - p80" loading="lazy" /></a>
+        </div>
+        <!-- END PERSONALART MASONRY ITEMS -->
       </section>
     </main>
-    <a href="#" class="popup" id="popup1" data-index="1">
-      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup4">←</button>
-      <img src="images/art1.jpg" alt="Artwork 1" />
-      <button class="popup-arrow right" aria-label="Next image" data-next="#popup2">→</button>
+    <!-- Popups for all images -->
+    <!-- BEGIN PERSONALART POPUPS -->
+    <a href="#" class="popup" id="popupPersonalart1" data-index="1">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart81">←</button>
+      <img src="images/personalart/p1.jpg" alt="Personalart - p1" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart2">→</button>
     </a>
-    <a href="#" class="popup" id="popup2" data-index="2">
-      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup1">←</button>
-      <img src="images/art2.jpg" alt="Artwork 2" />
-      <button class="popup-arrow right" aria-label="Next image" data-next="#popup3">→</button>
+    <a href="#" class="popup" id="popupPersonalart2" data-index="2">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart1">←</button>
+      <img src="images/personalart/p2.jpg" alt="Personalart - p2" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart3">→</button>
     </a>
-    <a href="#" class="popup" id="popup3" data-index="3">
-      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup2">←</button>
-      <img src="images/art3.jpg" alt="Artwork 3" />
-      <button class="popup-arrow right" aria-label="Next image" data-next="#popup4">→</button>
+    <a href="#" class="popup" id="popupPersonalart3" data-index="3">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart2">←</button>
+      <img src="images/personalart/p3.jpg" alt="Personalart - p3" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart4">→</button>
     </a>
-    <a href="#" class="popup" id="popup4" data-index="4">
-      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popup3">←</button>
-      <img src="images/art4.jpg" alt="Artwork 4" />
-      <button class="popup-arrow right" aria-label="Next image" data-next="#popup1">→</button>
+    <a href="#" class="popup" id="popupPersonalart4" data-index="4">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart3">←</button>
+      <img src="images/personalart/p4.jpg" alt="Personalart - p4" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart5">→</button>
     </a>
-  </div>
-  <script src="scripts.js"></script>
-  <script>
+    <a href="#" class="popup" id="popupPersonalart5" data-index="5">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart4">←</button>
+      <img src="images/personalart/p5.jpg" alt="Personalart - p5" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart6">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart6" data-index="6">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart5">←</button>
+      <img src="images/personalart/p6.jpg" alt="Personalart - p6" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart7">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart7" data-index="7">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart6">←</button>
+      <img src="images/personalart/p7.jpg" alt="Personalart - p7" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart8">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart8" data-index="8">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart7">←</button>
+      <img src="images/personalart/p8.jpg" alt="Personalart - p8" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart9">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart9" data-index="9">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart8">←</button>
+      <img src="images/personalart/p9.jpg" alt="Personalart - p9" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart10">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart10" data-index="10">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart9">←</button>
+      <img src="images/personalart/p10.jpg" alt="Personalart - p10" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart11">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart11" data-index="11">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart10">←</button>
+      <img src="images/personalart/p11.jpg" alt="Personalart - p11" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart12">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart12" data-index="12">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart11">←</button>
+      <img src="images/personalart/p12.jpg" alt="Personalart - p12" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart13">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart13" data-index="13">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart12">←</button>
+      <img src="images/personalart/p13.jpg" alt="Personalart - p13" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart14">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart14" data-index="14">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart13">←</button>
+      <img src="images/personalart/p14.jpg" alt="Personalart - p14" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart15">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart15" data-index="15">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart14">←</button>
+      <img src="images/personalart/p15.jpg" alt="Personalart - p15" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart16">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart16" data-index="16">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart15">←</button>
+      <img src="images/personalart/p16.jpg" alt="Personalart - p16" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart17">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart17" data-index="17">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart16">←</button>
+      <img src="images/personalart/p17.jpg" alt="Personalart - p17" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart18">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart18" data-index="18">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart17">←</button>
+      <img src="images/personalart/p18.jpg" alt="Personalart - p18" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart19">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart19" data-index="19">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart18">←</button>
+      <img src="images/personalart/p19.jpg" alt="Personalart - p19" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart20">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart20" data-index="20">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart19">←</button>
+      <img src="images/personalart/p20.jpg" alt="Personalart - p20" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart21">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart21" data-index="21">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart20">←</button>
+      <img src="images/personalart/p21.jpg" alt="Personalart - p21" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart22">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart22" data-index="22">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart21">←</button>
+      <img src="images/personalart/p22.jpg" alt="Personalart - p22" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart23">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart23" data-index="23">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart22">←</button>
+      <img src="images/personalart/p23.jpg" alt="Personalart - p23" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart24">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart24" data-index="24">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart23">←</button>
+      <img src="images/personalart/p24.jpg" alt="Personalart - p24" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart25">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart25" data-index="25">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart24">←</button>
+      <img src="images/personalart/p25.jpg" alt="Personalart - p25" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart26">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart26" data-index="26">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart25">←</button>
+      <img src="images/personalart/p26.jpg" alt="Personalart - p26" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart27">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart27" data-index="27">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart26">←</button>
+      <img src="images/personalart/p26a.jpg" alt="Personalart - p26a" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart28">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart28" data-index="28">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart27">←</button>
+      <img src="images/personalart/p27.jpg" alt="Personalart - p27" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart29">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart29" data-index="29">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart28">←</button>
+      <img src="images/personalart/p28.jpg" alt="Personalart - p28" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart30">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart30" data-index="30">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart29">←</button>
+      <img src="images/personalart/p29.jpg" alt="Personalart - p29" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart31">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart31" data-index="31">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart30">←</button>
+      <img src="images/personalart/p30.jpg" alt="Personalart - p30" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart32">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart32" data-index="32">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart31">←</button>
+      <img src="images/personalart/p31.jpg" alt="Personalart - p31" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart33">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart33" data-index="33">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart32">←</button>
+      <img src="images/personalart/p32.jpg" alt="Personalart - p32" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart34">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart34" data-index="34">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart33">←</button>
+      <img src="images/personalart/p33.jpg" alt="Personalart - p33" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart35">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart35" data-index="35">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart34">←</button>
+      <img src="images/personalart/p34.jpg" alt="Personalart - p34" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart36">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart36" data-index="36">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart35">←</button>
+      <img src="images/personalart/p35.jpg" alt="Personalart - p35" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart37">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart37" data-index="37">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart36">←</button>
+      <img src="images/personalart/p36.jpg" alt="Personalart - p36" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart38">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart38" data-index="38">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart37">←</button>
+      <img src="images/personalart/p37.jpg" alt="Personalart - p37" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart39">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart39" data-index="39">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart38">←</button>
+      <img src="images/personalart/p38.jpg" alt="Personalart - p38" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart40">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart40" data-index="40">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart39">←</button>
+      <img src="images/personalart/p39.jpg" alt="Personalart - p39" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart41">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart41" data-index="41">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart40">←</button>
+      <img src="images/personalart/p40.jpg" alt="Personalart - p40" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart42">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart42" data-index="42">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart41">←</button>
+      <img src="images/personalart/p41.jpg" alt="Personalart - p41" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart43">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart43" data-index="43">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart42">←</button>
+      <img src="images/personalart/p42.jpg" alt="Personalart - p42" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart44">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart44" data-index="44">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart43">←</button>
+      <img src="images/personalart/p43.jpg" alt="Personalart - p43" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart45">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart45" data-index="45">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart44">←</button>
+      <img src="images/personalart/p44.jpg" alt="Personalart - p44" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart46">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart46" data-index="46">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart45">←</button>
+      <img src="images/personalart/p45.jpg" alt="Personalart - p45" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart47">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart47" data-index="47">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart46">←</button>
+      <img src="images/personalart/p46.jpg" alt="Personalart - p46" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart48">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart48" data-index="48">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart47">←</button>
+      <img src="images/personalart/p47.jpg" alt="Personalart - p47" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart49">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart49" data-index="49">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart48">←</button>
+      <img src="images/personalart/p48.jpg" alt="Personalart - p48" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart50">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart50" data-index="50">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart49">←</button>
+      <img src="images/personalart/p49.jpg" alt="Personalart - p49" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart51">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart51" data-index="51">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart50">←</button>
+      <img src="images/personalart/p50.jpg" alt="Personalart - p50" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart52">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart52" data-index="52">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart51">←</button>
+      <img src="images/personalart/p51.jpg" alt="Personalart - p51" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart53">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart53" data-index="53">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart52">←</button>
+      <img src="images/personalart/p52.jpg" alt="Personalart - p52" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart54">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart54" data-index="54">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart53">←</button>
+      <img src="images/personalart/p53.jpg" alt="Personalart - p53" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart55">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart55" data-index="55">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart54">←</button>
+      <img src="images/personalart/p54.jpg" alt="Personalart - p54" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart56">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart56" data-index="56">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart55">←</button>
+      <img src="images/personalart/p55.jpg" alt="Personalart - p55" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart57">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart57" data-index="57">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart56">←</button>
+      <img src="images/personalart/p56.jpg" alt="Personalart - p56" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart58">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart58" data-index="58">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart57">←</button>
+      <img src="images/personalart/p57.jpg" alt="Personalart - p57" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart59">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart59" data-index="59">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart58">←</button>
+      <img src="images/personalart/p58.jpg" alt="Personalart - p58" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart60">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart60" data-index="60">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart59">←</button>
+      <img src="images/personalart/p59.jpg" alt="Personalart - p59" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart61">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart61" data-index="61">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart60">←</button>
+      <img src="images/personalart/p60.jpg" alt="Personalart - p60" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart62">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart62" data-index="62">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart61">←</button>
+      <img src="images/personalart/p61.jpg" alt="Personalart - p61" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart63">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart63" data-index="63">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart62">←</button>
+      <img src="images/personalart/p62.jpg" alt="Personalart - p62" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart64">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart64" data-index="64">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart63">←</button>
+      <img src="images/personalart/p63.jpg" alt="Personalart - p63" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart65">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart65" data-index="65">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart64">←</button>
+      <img src="images/personalart/p64.jpg" alt="Personalart - p64" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart66">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart66" data-index="66">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart65">←</button>
+      <img src="images/personalart/p65.jpg" alt="Personalart - p65" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart67">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart67" data-index="67">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart66">←</button>
+      <img src="images/personalart/p66.jpg" alt="Personalart - p66" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart68">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart68" data-index="68">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart67">←</button>
+      <img src="images/personalart/p67.jpg" alt="Personalart - p67" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart69">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart69" data-index="69">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart68">←</button>
+      <img src="images/personalart/p68.jpg" alt="Personalart - p68" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart70">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart70" data-index="70">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart69">←</button>
+      <img src="images/personalart/p69.jpg" alt="Personalart - p69" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart71">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart71" data-index="71">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart70">←</button>
+      <img src="images/personalart/p70.jpg" alt="Personalart - p70" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart72">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart72" data-index="72">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart71">←</button>
+      <img src="images/personalart/p71.jpg" alt="Personalart - p71" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart73">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart73" data-index="73">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart72">←</button>
+      <img src="images/personalart/p72.jpg" alt="Personalart - p72" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart74">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart74" data-index="74">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart73">←</button>
+      <img src="images/personalart/p73.jpg" alt="Personalart - p73" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart75">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart75" data-index="75">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart74">←</button>
+      <img src="images/personalart/p74.jpg" alt="Personalart - p74" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart76">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart76" data-index="76">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart75">←</button>
+      <img src="images/personalart/p75.jpg" alt="Personalart - p75" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart77">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart77" data-index="77">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart76">←</button>
+      <img src="images/personalart/p76.jpg" alt="Personalart - p76" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart78">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart78" data-index="78">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart77">←</button>
+      <img src="images/personalart/p77.jpg" alt="Personalart - p77" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart79">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart79" data-index="79">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart78">←</button>
+      <img src="images/personalart/p78.jpg" alt="Personalart - p78" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart80">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart80" data-index="80">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart79">←</button>
+      <img src="images/personalart/p79.jpg" alt="Personalart - p79" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart81">→</button>
+    </a>
+    <a href="#" class="popup" id="popupPersonalart81" data-index="81">
+      <button class="popup-arrow left" aria-label="Previous image" data-prev="#popupPersonalart80">←</button>
+      <img src="images/personalart/p80.jpg" alt="Personalart - p80" loading="lazy" />
+      <button class="popup-arrow right" aria-label="Next image" data-next="#popupPersonalart1">→</button>
+    </a>
+    <!-- END PERSONALART POPUPS -->
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+    <script>
+      // Initialize Lenis for buttery smooth scroll
+      const lenis = new Lenis({
+        lerp: 0.07, // Lower = smoother, higher = snappier
+        wheelMultiplier: 1,
+        touchMultiplier: 1,
+        smoothWheel: true,
+        smoothTouch: true
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    </script>
+    <script>
     (function() {
       var hamburger = document.getElementById('hamburger-menu');
       var navLinks = document.querySelector('.nav-links');

@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Borel&family=Delius+Swash+Caps:wght@400&family=Limelight&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/khaesulogo/tulip.png" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+  <style>
+    html.lenis { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+  </style>
 </head>
 
 <body>
@@ -112,10 +119,10 @@
               <div class="tile-images" style="position: relative;">
                 <button class="scroll-arrow left" aria-label="Scroll images left">←</button>
                 <div class="image-scroller">
-                  <a href="#popupBLP1"><img src="images/BLP/blp1.jpg" alt="BLP 1" class="project1-img" /></a>
-                  <a href="#popupBLP2"><img src="images/BLP/blp2.jpg" alt="BLP 2" class="project1-img" /></a>
-                  <a href="#popupBLP3"><img src="images/BLP/blp3.jpg" alt="BLP 3" class="project1-img" /></a>
-                  <a href="#popupBLP4"><img src="images/BLP/blp4.jpg" alt="BLP 4" class="project1-img" /></a>
+                  <a href="#popupBLP1"><img src="images/BLP/blp1.jpg" alt="BLP 1" class="project1-img blp-img1" /></a>
+                  <a href="#popupBLP2"><img src="images/BLP/blp2.jpg" alt="BLP 2" class="project1-img blp-img2" /></a>
+                  <a href="#popupBLP3"><img src="images/BLP/blp3.jpg" alt="BLP 3" class="project1-img blp-img3" /></a>
+                  <a href="#popupBLP4"><img src="images/BLP/blp4.jpg" alt="BLP 4" class="project1-img blp-img4" /></a>
                 </div>
                 <button class="scroll-arrow right" aria-label="Scroll images right">→</button>
               </div>
@@ -135,9 +142,9 @@
                   <a href="#popupIcla1"><img src="images/icla/icla1.jpg" alt="ICLA 1" class="comic-page-img" /></a>
                   <a href="#popupIcla2"><img src="images/icla/icla2.jpg" alt="ICLA 2" class="comic-page-img" /></a>
                   <a href="#popupIcla3"><img src="images/icla/icla3.jpg" alt="ICLA 3" class="comic-page-img" /></a>
-                  <a href="#popupIcla4"><img src="images/icla/icla4.jpg" alt="ICLA 4" class="comic-page-img" /></a>
                   <a href="#popupIcla5"><img src="images/icla/icla5.jpg" alt="ICLA 5" class="comic-page-img" /></a>
                   <a href="#popupIcla7"><img src="images/icla/icla7.jpg" alt="ICLA 7" class="comic-page-img" /></a>
+                  <a href="#popupIcla4"><img src="images/icla/icla4.jpg" alt="ICLA 4" class="comic-page-img" /></a>
                 </div>
                 <button class="scroll-arrow right" aria-label="Scroll images right">→</button>
               </div>
@@ -305,6 +312,22 @@
     </a>
   </div>
   <script src="scripts.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script>
+    // Initialize Lenis for buttery smooth scroll
+    const lenis = new Lenis({
+      lerp: 0.07, // Lower = smoother, higher = snappier
+      wheelMultiplier: 1,
+      touchMultiplier: 1,
+      smoothWheel: true,
+      smoothTouch: true
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  </script>
   <script>
   (function() {
     var hamburger = document.getElementById('hamburger-menu');
