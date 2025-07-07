@@ -563,7 +563,7 @@ nav a.active,
   .about-text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
   }
   
   .artist-section {
@@ -636,12 +636,12 @@ nav a.active,
   
   .about-text p {
     line-height: 1.7;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.5rem;
     text-align: left;
   }
   
   .about-text h2, .about-text h3 {
-    margin: 2rem 0 1.2rem 0;
+    margin: 2rem 0 0.2rem 0;
     text-align: left;
   }
   
@@ -1038,21 +1038,91 @@ footer a:hover {
     padding: 0;
     margin: 0;
   }
-  .about-section, .about-text, .artist-section, .note-section {
+  /* Standardize widths for artist-section, note-section, and about-video */
+  .artist-section,
+  .note-section,
+  .about-video {
+    width: 100%;
+    max-width: 100vw;
+    padding: 1.5rem;
+    margin: 0 auto;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Inner elements */
+  .artist-text,
+  .note-text,
+  .about-video > div {
     width: 100%;
     max-width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
-  .tile-bg2 .image-scroller img {
-    height: 340px !important;
-    max-height: 340px !important;
-    object-fit: contain !important;
+
+  .artist-text {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    text-justify: none !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .artist-photo,
+  .note-photo {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .artist-face,
+  .note-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .about-video > div {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .about-section {
+    width: 100%;
+    max-width: 100vw;
+    padding: 1.5rem;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .about-text p {
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    text-align: left;
+  }
+
+  .about-text h2, .about-text h3 {
+    margin: 2rem 0 1.2rem 0;
+    text-align: left;
   }
   .header-row {
     display: flex;
