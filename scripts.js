@@ -299,7 +299,7 @@ function initMenu() {
     navLinks.style.display = 'none';
     closeMenu.style.display = 'none';
   });
-  document.querySelectorAll('.nav-links a, .nav-social a').forEach(function(link) {
+  document.querySelectorAll('.nav-links a, .nav-social a, .mobile-home-link').forEach(function(link) {
     link.addEventListener('click', function() {
       if (window.innerWidth <= 768) {
         document.body.classList.remove('nav-open');

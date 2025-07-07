@@ -43,6 +43,7 @@
                     <button id="close-menu" aria-label="Close menu" style="display:none;position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;padding:0.5rem;z-index:3000;cursor:pointer;">
                         <svg width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="8" x2="24" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="8" x2="8" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/></svg>
                     </button>
+                    <a href="index.html" class="mobile-home-link" style="display: none; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); font-family: 'Darumadrop One', sans-serif; font-weight: 400; font-size: 5rem; color: #d95662; text-decoration: none; white-space: nowrap; z-index: 2501;">Khae Su</a>
                     <div class="nav-links">
                         <a href="index.html">Personal</a>
                         <a href="work.html">Work</a>
@@ -125,7 +126,7 @@
         navLinks.style.display = 'none';
         closeMenu.style.display = 'none';
       });
-      document.querySelectorAll('.nav-links a, .nav-social a').forEach(function(link) {
+      document.querySelectorAll('.nav-links a, .nav-social a, .mobile-home-link').forEach(function(link) {
         link.addEventListener('click', function() {
           if (window.innerWidth <= 768) {
             document.body.classList.remove('nav-open');

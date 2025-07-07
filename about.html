@@ -44,6 +44,7 @@
           <button id="close-menu" aria-label="Close menu" style="display:none;position:absolute;top:1.2rem;right:1.2rem;background:none;border:none;padding:0.5rem;z-index:3000;cursor:pointer;">
             <svg width="32" height="32" viewBox="0 0 32 32"><line x1="8" y1="8" x2="24" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/><line x1="24" y1="8" x2="8" y2="24" stroke="#d89fa4" stroke-width="3" stroke-linecap="round"/></svg>
           </button>
+          <a href="index.html" class="mobile-home-link" style="display: none; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); font-family: 'Darumadrop One', sans-serif; font-weight: 400; font-size: 5rem; color: #d95662; text-decoration: none; white-space: nowrap; z-index: 2501;">Khae Su</a>
           <div class="nav-links">
             <a href="index.html">Personal</a>
             <a href="work.html">Work</a>
@@ -83,7 +84,7 @@
           </div>
           <div class="note-section">
             <div class="note-text" style="max-width: 1000px; margin-left: auto; margin-right: auto; padding-left: 2.5rem; padding-right: 2.5rem; margin-top: 0rem;">
-              <h2 style="color: #5c8a34;">A Little More About Khae</h2>
+              <h2 style="color: #5c8a34; text-align: center;">A Little More About Khae</h2>
               <p style="font-size: 1.1rem;">The name Khae comes from the Burmese word Yay Khae (ရေခဲ), meaning ice. It was a nickname given to her by friends in high school for her calm and introverted nature. Over time, she embraced Khae-ခဲ as her artist identity - a quiet, steady name that reflects both her personality and her artistic sensibility.</p>
               <p style="font-size: 1.1rem;">When she's not painting or drawing, Khae enjoys biking around Paris on her bike "Noe", collecting notebooks, journaling to capture her thoughts, and thrifting for secondhand clothes. She loves flowers, solo trips to the tiny old cinemas in paris , music that stirs deep emotions, and Studio Ghibli films. The beauty of nature and simple moments bring her comfort and inspiration.</p>
             </div>
@@ -176,7 +177,7 @@
       navLinks.style.display = 'none';
       closeMenu.style.display = 'none';
     });
-    document.querySelectorAll('.nav-links a').forEach(function(link) {
+    document.querySelectorAll('.nav-links a, .nav-social a, .mobile-home-link').forEach(function(link) {
       link.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
           document.body.classList.remove('nav-open');
