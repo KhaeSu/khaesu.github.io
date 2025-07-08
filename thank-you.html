@@ -99,6 +99,61 @@
             document.body.appendChild(script);
         }
     </script>
+    <script>
+(function() {
+  var hamburger = document.getElementById('hamburger-menu');
+  var navLinks = document.querySelector('.nav-links');
+  var navSocial = document.querySelector('.nav-social');
+  var closeMenu = document.getElementById('close-menu');
+  function checkWidth() {
+    if (window.innerWidth <= 768) {
+      hamburger.style.display = 'block';
+      navLinks.style.display = 'none';
+      navSocial.style.display = 'none';
+      closeMenu.style.display = 'none';
+      document.body.classList.remove('nav-open');
+    } else {
+      hamburger.style.display = 'none';
+      navLinks.style.display = '';
+      navSocial.style.display = '';
+      closeMenu.style.display = 'none';
+      document.body.classList.remove('nav-open');
+    }
+  }
+  hamburger && hamburger.addEventListener('click', function() {
+    var isOpen = document.body.classList.contains('nav-open');
+    if (isOpen) {
+      document.body.classList.remove('nav-open');
+      navLinks.style.display = 'none';
+      navSocial.style.display = 'none';
+      closeMenu.style.display = 'none';
+    } else {
+      document.body.classList.add('nav-open');
+      navLinks.style.display = 'flex';
+      navSocial.style.display = 'flex';
+      closeMenu.style.display = 'block';
+    }
+  });
+  closeMenu && closeMenu.addEventListener('click', function() {
+    document.body.classList.remove('nav-open');
+    navLinks.style.display = 'none';
+    navSocial.style.display = 'none';
+    closeMenu.style.display = 'none';
+  });
+  document.querySelectorAll('.nav-links a, .nav-social a, .mobile-home-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        document.body.classList.remove('nav-open');
+        navLinks.style.display = 'none';
+        navSocial.style.display = 'none';
+        closeMenu.style.display = 'none';
+      }
+    });
+  });
+  window.addEventListener('resize', checkWidth);
+  document.addEventListener('DOMContentLoaded', checkWidth);
+})();
+    </script>
 </body>
 
 </html>
