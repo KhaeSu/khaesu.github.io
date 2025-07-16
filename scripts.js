@@ -5,7 +5,7 @@ window.addEventListener('contextmenu', function (e) {
 // Determine which page we're on and set popup navigation variables accordingly
 let totalImages = 4;
 let popupPrefix = '#popup';
-if (window.location.pathname.includes('work.html')) {
+if (window.location.pathname.includes('projects.html')) {
     totalImages = 6;
     popupPrefix = '#popup';
 } else if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '/khaesu.github.io/') {
