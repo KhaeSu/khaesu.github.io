@@ -250,7 +250,7 @@ setupPopupArrows();
 
 // Prevent scroll-to-top when opening popups from image links
 let lastScrollY = 0;
-document.querySelectorAll('.tile-images a[href^="#popup"]').forEach(link => {
+document.querySelectorAll('a[href^="#popup"]').forEach(link => {
   link.addEventListener('click', function(e) {
     lastScrollY = window.scrollY;
     setTimeout(() => window.scrollTo(0, lastScrollY), 1);
@@ -312,6 +312,122 @@ function initMenu() {
   document.addEventListener('DOMContentLoaded', checkWidth);
 }
 
+function initMasonryLoadMore() {
+  const isHomePage = window.location.pathname.endsWith('index.html') ||
+    window.location.pathname === '/' ||
+    window.location.pathname === '/khaesu.github.io/';
+
+  if (!isHomePage) return;
+
+  const gallery = document.querySelector('.masonry-gallery');
+  if (!gallery) return;
+
+  const items = Array.from(gallery.querySelectorAll('.masonry-item'));
+  const batchSize = 20;
+  const columnBreaks = [27, 56, items.length];
+
+  if (items.length <= batchSize) return;
+
+  let visibleCount = batchSize;
+  let columnGroups = [];
+
+  const controls = document.createElement('div');
+  controls.className = 'gallery-load-more';
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'load-more-btn';
+  button.textContent = 'Load more';
+  controls.appendChild(button);
+  gallery.insertAdjacentElement('afterend', controls);
+
+  function buildFixedColumns() {
+    gallery.classList.add('fixed-columns');
+    gallery.innerHTML = '';
+    columnGroups = [];
+
+    let startIndex = 0;
+    columnBreaks.forEach(function(endIndex) {
+      const column = document.createElement('div');
+      column.className = 'masonry-column';
+      const groupItems = items.slice(startIndex, endIndex);
+      groupItems.forEach(function(item) {
+        column.appendChild(item);
+      });
+      gallery.appendChild(column);
+      columnGroups.push(groupItems);
+      startIndex = endIndex;
+    });
+  }
+
+  function allocateVisibleItems(totalVisible) {
+    const totalItems = items.length;
+    const allocations = columnGroups.map(function(group) {
+      const exact = totalVisible * group.length / totalItems;
+      return {
+        count: Math.floor(exact),
+        remainder: exact % 1
+      };
+    });
+
+    let assigned = allocations.reduce(function(sum, entry) {
+      return sum + entry.count;
+    }, 0);
+
+    while (assigned < totalVisible) {
+      let bestIndex = 0;
+      for (let index = 1; index < allocations.length; index++) {
+        if (allocations[index].remainder > allocations[bestIndex].remainder) {
+          bestIndex = index;
+        }
+      }
+      allocations[bestIndex].count += 1;
+      allocations[bestIndex].remainder = 0;
+      assigned += 1;
+    }
+
+    return allocations.map(function(entry, index) {
+      return Math.min(entry.count, columnGroups[index].length);
+    });
+  }
+
+  function updateVisibleItems() {
+    if (columnGroups.length) {
+      const allocations = allocateVisibleItems(visibleCount);
+      columnGroups.forEach(function(group, groupIndex) {
+        group.forEach(function(item, itemIndex) {
+          item.style.display = itemIndex < allocations[groupIndex] ? 'block' : 'none';
+        });
+      });
+    } else {
+      items.forEach(function(item, index) {
+        item.style.display = index < visibleCount ? 'block' : 'none';
+      });
+    }
+
+    if (visibleCount >= items.length) {
+      controls.style.display = 'none';
+    } else {
+      controls.style.display = 'flex';
+    }
+  }
+
+  if (items.length === 81) {
+    buildFixedColumns();
+  } else {
+    items.forEach(function(item) {
+      item.style.display = 'block';
+    });
+  }
+
+  button.addEventListener('click', function() {
+    visibleCount = Math.min(visibleCount + batchSize, items.length);
+    updateVisibleItems();
+  });
+
+  updateVisibleItems();
+}
+
 // Filter functionality for masonry gallery
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -351,6 +467,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  initMasonryLoadMore();
 });
 
 // Add captions and overlay to masonry gallery images on index.html
