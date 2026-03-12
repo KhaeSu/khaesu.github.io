@@ -330,6 +330,7 @@ function initMasonryLoadMore() {
 
   let visibleCount = batchSize;
   let columnGroups = [];
+  let cropUpdateFrame = null;
 
   const controls = document.createElement('div');
   controls.className = 'gallery-load-more';
@@ -407,9 +408,46 @@ function initMasonryLoadMore() {
 
     if (visibleCount >= items.length) {
       controls.style.display = 'none';
+      gallery.style.maxHeight = '';
     } else {
       controls.style.display = 'flex';
+      scheduleCropUpdate();
     }
+  }
+
+  function updateCrop() {
+    cropUpdateFrame = null;
+
+    if (!columnGroups.length || controls.style.display === 'none') {
+      gallery.style.maxHeight = '';
+      return;
+    }
+
+    const lastVisibleItems = columnGroups.map(function(group) {
+      for (let index = group.length - 1; index >= 0; index--) {
+        if (group[index].style.display !== 'none') {
+          return group[index];
+        }
+      }
+      return null;
+    }).filter(Boolean);
+
+    if (!lastVisibleItems.length) {
+      gallery.style.maxHeight = '';
+      return;
+    }
+
+    const galleryRect = gallery.getBoundingClientRect();
+    const cropBottom = Math.min.apply(null, lastVisibleItems.map(function(item) {
+      return item.getBoundingClientRect().bottom - galleryRect.top;
+    }));
+
+    gallery.style.maxHeight = `${Math.max(cropBottom, 0)}px`;
+  }
+
+  function scheduleCropUpdate() {
+    if (cropUpdateFrame !== null) return;
+    cropUpdateFrame = requestAnimationFrame(updateCrop);
   }
 
   if (items.length === 81) {
@@ -423,6 +461,13 @@ function initMasonryLoadMore() {
   button.addEventListener('click', function() {
     visibleCount = Math.min(visibleCount + batchSize, items.length);
     updateVisibleItems();
+  });
+
+  window.addEventListener('resize', scheduleCropUpdate);
+  items.forEach(function(item) {
+    const img = item.querySelector('img');
+    if (!img || img.complete) return;
+    img.addEventListener('load', scheduleCropUpdate);
   });
 
   updateVisibleItems();
