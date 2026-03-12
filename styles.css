@@ -396,26 +396,32 @@ nav a.active,
 .gallery-load-more {
   display: flex;
   justify-content: center;
-  padding: 1.5rem 0 2.5rem;
+  align-items: center;
+  padding: 1.25rem 0 2.25rem;
+  width: 100%;
 }
 
 .load-more-btn {
-  border: 2px solid #d89fa4;
-  border-radius: 999px;
-  background: #fffaf6;
+  border: none;
+  background: transparent;
   color: #5c8a34;
-  padding: 0.75rem 1.6rem;
+  padding: 0;
   font-family: 'Borel', cursive;
-  font-size: 1rem;
+  font-size: 1.35rem;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 auto;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.24em;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, transform 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .load-more-btn:hover {
-  background: #d89fa4;
-  color: #fffaf6;
+  color: #d89fa4;
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(216, 159, 164, 0.22);
+  text-decoration-color: #d89fa4;
 }
 
 /* Responsive adjustments for masonry */
