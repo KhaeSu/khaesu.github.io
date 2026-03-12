@@ -409,8 +409,10 @@ function initMasonryLoadMore() {
     if (visibleCount >= items.length) {
       controls.style.display = 'none';
       gallery.style.maxHeight = '';
+      gallery.classList.remove('has-crop-fade');
     } else {
       controls.style.display = 'flex';
+      gallery.classList.add('has-crop-fade');
       scheduleCropUpdate();
     }
   }
@@ -420,6 +422,7 @@ function initMasonryLoadMore() {
 
     if (!columnGroups.length || controls.style.display === 'none') {
       gallery.style.maxHeight = '';
+      gallery.classList.remove('has-crop-fade');
       return;
     }
 
@@ -434,6 +437,7 @@ function initMasonryLoadMore() {
 
     if (!lastVisibleItems.length) {
       gallery.style.maxHeight = '';
+      gallery.classList.remove('has-crop-fade');
       return;
     }
 
